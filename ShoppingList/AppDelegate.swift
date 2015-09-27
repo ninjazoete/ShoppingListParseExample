@@ -16,27 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        /* Register subclasses manualy */
+        /* Notice : Do it before calling app key */
+        User.registerSubclass()
+        
         Parse.setApplicationId("ZZ9obExqTGWfhFJ5aHw3ewZazcCFlDbyeDiFXSrZ",
             clientKey: "gptMrJJ8ZvJKXyJ4uUdkkIKHENyq0R68gQKka1Z8")
         Parse.setLogLevel(PFLogLevel.Debug)
-        
-//        var groceryFruits = PFObject(className:"GroceryVegetables")
-//        groceryFruits["selery"] = 10
-//        groceryFruits.saveInBackgroundWithBlock {
-//            (success: Bool, error: NSError?) -> Void in
-//            if (success) {
-//                // The object has been saved.
-//            } else {
-//                // There was a problem, check error.description
-//            }
-//        }
-        
-//        let query = PFQuery(className: "GroceryFruits")
-//        query.whereKey("apple", greaterThan: 2)
-//        query.findObjectsInBackgroundWithBlock { (object, error) -> Void in
-//            print(error)
-//            print(object)
-//        }
         
         return true
     }

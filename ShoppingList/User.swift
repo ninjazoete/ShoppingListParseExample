@@ -7,20 +7,8 @@
 //
 
 import Foundation
+import Parse
 
-class User {
+class User : PFUser {
     
-    let username : String
-    let password : String
-    
-    init(username : String, password : String) {
-        self.username = username
-        self.password = password
-    }
-}
-
-extension User : ParseServiceCompatible {
-    static func parseClassName() -> String {
-        return "User"
-    }
 }
