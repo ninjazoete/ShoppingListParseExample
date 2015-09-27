@@ -34,6 +34,21 @@ class ParseService : Service {
         })
     }
     
+    func addGrocery(user: User, grocery: Grocery) -> Observable<Grocery> {
+        return create({ (groceryAddObserver : ObserverOf<Grocery>) -> Disposable in
+            self._parseAddGrocery(user, grocery: grocery, observer: groceryAddObserver)
+            return NopDisposable.instance
+            
+        })
+    }
+    
+    func fetchGroceries(user: User) -> Observable<[Grocery]> {
+        return create({ (groceryFetchObserver : ObserverOf<[Grocery]>) -> Disposable in
+            self._parseFetchGrocery(user, observer: groceryFetchObserver)
+            return NopDisposable.instance
+        })
+    }
+    
     // MARK: Parse Actions
     private func _parseRegisterUser(user : User, observer : ObserverOf<User>) -> Void {
         
@@ -68,5 +83,66 @@ class ParseService : Service {
                     observer.on(Event.Completed)
                 }
         }
+    }
+    
+    private func _parseAddGrocery(user : User, grocery : Grocery, observer : ObserverOf<Grocery>) -> Void {
+        
+        guard
+            let userId = user.objectId
+        else {
+            return
+        }
+        
+        let groceryToAdd = PFObject(className: Grocery.parseClassName())
+        groceryToAdd["productName"] = grocery.nameOfProduct
+        groceryToAdd["productAmount"] = grocery.amount
+        groceryToAdd["owner"] = userId
+        
+        groceryToAdd.saveInBackgroundWithBlock { (success, error) -> Void in
+            
+            if(success) {
+                observer.on(Event.Next(grocery))
+                observer.on(Event.Completed)
+            } else if let err = error {
+                observer.on(Event.Error(err))
+            }
+        }
+    }
+    
+    private func _parseFetchGrocery(user : User, observer : ObserverOf<[Grocery]>) -> Void {
+        
+        guard
+            let userId = user.objectId
+            else {
+                return
+        }
+        
+        let groceryQuery = PFQuery(className: Grocery.parseClassName())
+        groceryQuery.whereKey("owner", equalTo: userId)
+        groceryQuery.findObjectsInBackgroundWithBlock { (groceries, error) -> Void in
+            
+            if let groceryList = groceries {
+                
+                let userGroceryList : [Grocery?] = groceryList
+                    .map({ (pfGrocery : PFObject) -> Grocery? in
+                        
+                        guard
+                            let productName = pfGrocery["productName"] as? String,
+                            let productAmount = pfGrocery["productAmount"] as? UInt
+                        else {
+                            return nil
+                        }
+                        
+                        return Grocery(owner: userId, amount: productAmount, productName: productName)
+                    })
+            
+                observer.on(Event.Next(userGroceryList.flatMap({ $0 })))
+                observer.on(Event.Completed)
+            } else if let err = error {
+                observer.on(Event.Error(err))
+            }
+            
+        }
+        
     }
 }

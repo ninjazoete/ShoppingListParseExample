@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ShoppingListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -24,19 +25,20 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource, UITab
     // MARK: Data
     private func fetchOwnerList() -> Void {
         
-        let ban = Grocery(owner : "", amount : 2, productName : "Banana")
-        let ban1 = Grocery(owner : "", amount : 5, productName : "Banana")
-        let ban2 = Grocery(owner : "", amount : 6, productName : "Banana")
-        let ban3 = Grocery(owner : "", amount : 8, productName : "Banana")
-        let ban4 = Grocery(owner : "", amount : 10, productName : "Banana")
-        let ban5 = Grocery(owner : "", amount : 12, productName : "Banana")
-        let ban6 = Grocery(owner : "", amount : 3, productName : "Banana")
+        listOwner = PFUser.currentUser() as? User
         
-        let bananas = [ban, ban1, ban2, ban3, ban4, ban5, ban6]
-        
-        ownerShoppingList.appendContentsOf(bananas)
-        
-        listTableView.reloadData()
+        if let user = listOwner {
+            ExternalDataService.fetchGroceries(user).subscribe(next: { (groceryList) -> Void in
+                
+                self.ownerShoppingList.appendContentsOf(groceryList)
+                self.listTableView.reloadData()
+                
+                }, error: { (error) -> Void in
+                    print(error)
+                }, completed: { () -> Void in
+                    
+                }, disposed: nil)
+        }
     }
     
     // MARK: Delegates

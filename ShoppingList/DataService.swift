@@ -27,5 +27,13 @@ class DataService<S : Service> {
         return internalService.loginUser(user)
     }
     
+    func addGrocery(user : User, grocery : Grocery) -> Observable<Grocery> {
+        return internalService.addGrocery(user, grocery: grocery)
+    }
+    
+    func fetchGroceries(user : User) -> Observable<[Grocery]> {
+        return internalService.fetchGroceries(user)
+    }
+    
     // MARK: Private API
 }

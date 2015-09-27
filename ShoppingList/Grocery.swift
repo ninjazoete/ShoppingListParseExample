@@ -8,16 +8,20 @@
 
 import Foundation
 
-class Grocery {
+class Grocery : ParseServiceCompatible {
     
-    let ownerName : String
+    let ownerId : String
     let amount : UInt
     let nameOfProduct : String
     
     init(owner : String, amount : UInt, productName : String) {
         
-        self.ownerName = owner
+        self.ownerId = owner
         self.amount = amount
         self.nameOfProduct = productName
+    }
+    
+    static func parseClassName() -> String {
+        return "Grocery"
     }
 }

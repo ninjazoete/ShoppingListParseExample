@@ -21,9 +21,8 @@
 		58A4DFDC1BB7E1D1001D7355 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DFDB1BB7E1D1001D7355 /* UIViewController+Navigation.swift */; settings = {ASSET_TAGS = (); }; };
 		58A4DFDE1BB7E234001D7355 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DFDD1BB7E234001D7355 /* FormViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		58A4DFE01BB7EE17001D7355 /* Grocery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DFDF1BB7EE17001D7355 /* Grocery.swift */; settings = {ASSET_TAGS = (); }; };
-		58A4DFE31BB7EEBC001D7355 /* Fruits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DFE21BB7EEBC001D7355 /* Fruits.swift */; settings = {ASSET_TAGS = (); }; };
-		58A4DFE51BB7EF33001D7355 /* Vegetables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DFE41BB7EF33001D7355 /* Vegetables.swift */; settings = {ASSET_TAGS = (); }; };
 		58A4DFE81BB7F304001D7355 /* GroceryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DFE71BB7F304001D7355 /* GroceryTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		58A4DFEA1BB7FB63001D7355 /* AddGroceryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DFE91BB7FB63001D7355 /* AddGroceryViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		6575AEEB0238458F729BD812 /* Pods_ShoppingList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F368F60B231D8CD31A1F1A7C /* Pods_ShoppingList.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -45,9 +44,8 @@
 		58A4DFDB1BB7E1D1001D7355 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		58A4DFDD1BB7E234001D7355 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		58A4DFDF1BB7EE17001D7355 /* Grocery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grocery.swift; sourceTree = "<group>"; };
-		58A4DFE21BB7EEBC001D7355 /* Fruits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fruits.swift; sourceTree = "<group>"; };
-		58A4DFE41BB7EF33001D7355 /* Vegetables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vegetables.swift; sourceTree = "<group>"; };
 		58A4DFE71BB7F304001D7355 /* GroceryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryTableViewCell.swift; sourceTree = "<group>"; };
+		58A4DFE91BB7FB63001D7355 /* AddGroceryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroceryViewController.swift; sourceTree = "<group>"; };
 		A85E32AD396713831A891F3C /* Pods-ShoppingList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingList.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingList/Pods-ShoppingList.release.xcconfig"; sourceTree = "<group>"; };
 		F368F60B231D8CD31A1F1A7C /* Pods_ShoppingList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppingList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F75568B3C252D4D06BB566C9 /* Pods-ShoppingList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingList/Pods-ShoppingList.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,10 +110,9 @@
 		58A4DFC81BB72CD7001D7355 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				58A4DFC91BB72CE9001D7355 /* RegisterViewController.swift */,
+				58A4DFEB1BB7FB7A001D7355 /* Form */,
 				58A4DFD61BB7D890001D7355 /* ShoppingListViewController.swift */,
-				58A4DFD81BB7E0FF001D7355 /* EntranceViewController.swift */,
-				58A4DFDD1BB7E234001D7355 /* FormViewController.swift */,
+				58A4DFE91BB7FB63001D7355 /* AddGroceryViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -152,8 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				58A4DFDF1BB7EE17001D7355 /* Grocery.swift */,
-				58A4DFE21BB7EEBC001D7355 /* Fruits.swift */,
-				58A4DFE41BB7EF33001D7355 /* Vegetables.swift */,
 			);
 			name = Grocery;
 			sourceTree = "<group>";
@@ -164,6 +159,16 @@
 				58A4DFE71BB7F304001D7355 /* GroceryTableViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		58A4DFEB1BB7FB7A001D7355 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				58A4DFDD1BB7E234001D7355 /* FormViewController.swift */,
+				58A4DFC91BB72CE9001D7355 /* RegisterViewController.swift */,
+				58A4DFD81BB7E0FF001D7355 /* EntranceViewController.swift */,
+			);
+			name = Form;
 			sourceTree = "<group>";
 		};
 		6C13FCA890534DE4E0303746 /* Frameworks */ = {
@@ -296,12 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58A4DFE31BB7EEBC001D7355 /* Fruits.swift in Sources */,
+				58A4DFEA1BB7FB63001D7355 /* AddGroceryViewController.swift in Sources */,
 				58A4DFCA1BB72CE9001D7355 /* RegisterViewController.swift in Sources */,
 				58A4DFE01BB7EE17001D7355 /* Grocery.swift in Sources */,
 				58A4DFD41BB72F6B001D7355 /* Service.swift in Sources */,
 				58A4DFD21BB72F4E001D7355 /* ParseService.swift in Sources */,
-				58A4DFE51BB7EF33001D7355 /* Vegetables.swift in Sources */,
 				58A4DFDC1BB7E1D1001D7355 /* UIViewController+Navigation.swift in Sources */,
 				58A4DFD71BB7D890001D7355 /* ShoppingListViewController.swift in Sources */,
 				58A4DFCD1BB72E15001D7355 /* DataService.swift in Sources */,
