@@ -7,12 +7,11 @@
 //
 
 import Foundation
-
-typealias NoRActionCallback = ErrorType -> Void
+import RxSwift
 
 protocol Service {
     init()
-    func registerUser(user : User, callback : NoRActionCallback)
-    func loginUser(user : User, callback : NoRActionCallback)
+    func registerUser(user : User) -> Observable<User>
+    func loginUser(user : User) -> Observable<User>
     
 }

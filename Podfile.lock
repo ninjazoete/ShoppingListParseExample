@@ -2,12 +2,23 @@ PODS:
   - Bolts/Tasks (1.3.0)
   - Parse (1.8.5):
     - Bolts/Tasks (>= 1.2.2)
+  - RxBlocking (2.0.0-alpha.3):
+    - RxSwift (~> 2.0.0-alpha)
+  - RxCocoa (2.0.0-alpha.3):
+    - RxSwift (~> 2.0.0-alpha)
+  - RxSwift (2.0.0-alpha.3)
 
 DEPENDENCIES:
   - Parse
+  - RxBlocking (~> 2.0.0-alpha)
+  - RxCocoa (~> 2.0.0-alpha)
+  - RxSwift (~> 2.0.0-alpha)
 
 SPEC CHECKSUMS:
   Bolts: 805a4a87413e49d4a0c2b7d469084cbc46b09342
   Parse: 17ad8e0677ed682f7f00503860fcda0f4eb74168
+  RxBlocking: 0a4086da64fbbc916ac0251252d93f5f4f97ce5a
+  RxCocoa: 2a45f35cd0eb6a01e081b3d11849c2fcb0bdb6de
+  RxSwift: c66f7956b2e5fb397a62bf4a3ec6072749a816a7
 
 COCOAPODS: 0.38.2

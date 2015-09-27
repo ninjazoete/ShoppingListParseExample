@@ -9,6 +9,18 @@
 import Foundation
 
 class User {
-    var username : String?
-    var password : String?
+    
+    let username : String
+    let password : String
+    
+    init(username : String, password : String) {
+        self.username = username
+        self.password = password
+    }
+}
+
+extension User : ParseServiceCompatible {
+    static func parseClassName() -> String {
+        return "User"
+    }
 }

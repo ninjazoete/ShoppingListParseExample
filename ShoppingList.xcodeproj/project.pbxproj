@@ -17,11 +17,10 @@
 		58A4DFCF1BB72EC2001D7355 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DFCE1BB72EC2001D7355 /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		58A4DFD21BB72F4E001D7355 /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DFD11BB72F4E001D7355 /* ParseService.swift */; settings = {ASSET_TAGS = (); }; };
 		58A4DFD41BB72F6B001D7355 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4DFD31BB72F6B001D7355 /* Service.swift */; settings = {ASSET_TAGS = (); }; };
-		691395101AB081A53B8472DB /* libPods-ShoppingList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FFDCA4AF877C886AC79E892 /* libPods-ShoppingList.a */; };
+		6575AEEB0238458F729BD812 /* Pods_ShoppingList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F368F60B231D8CD31A1F1A7C /* Pods_ShoppingList.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1FFDCA4AF877C886AC79E892 /* libPods-ShoppingList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShoppingList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A4DFAE1BB6B31D001D7355 /* ShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A4DFB11BB6B31D001D7355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58A4DFB31BB6B31D001D7355 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,13 +28,14 @@
 		58A4DFB81BB6B31D001D7355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58A4DFBB1BB6B31D001D7355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58A4DFBD1BB6B31D001D7355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		58A4DFC41BB6B545001D7355 /* ShoppingList-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShoppingList-Bridging-Header.h"; sourceTree = "<group>"; };
 		58A4DFC91BB72CE9001D7355 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		58A4DFCC1BB72E15001D7355 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		58A4DFCE1BB72EC2001D7355 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		58A4DFD11BB72F4E001D7355 /* ParseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseService.swift; sourceTree = "<group>"; };
 		58A4DFD31BB72F6B001D7355 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		58A4DFD51BB73A1F001D7355 /* Shop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shop.h; sourceTree = "<group>"; };
 		A85E32AD396713831A891F3C /* Pods-ShoppingList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingList.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingList/Pods-ShoppingList.release.xcconfig"; sourceTree = "<group>"; };
+		F368F60B231D8CD31A1F1A7C /* Pods_ShoppingList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppingList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F75568B3C252D4D06BB566C9 /* Pods-ShoppingList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingList/Pods-ShoppingList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				691395101AB081A53B8472DB /* libPods-ShoppingList.a in Frameworks */,
+				6575AEEB0238458F729BD812 /* Pods_ShoppingList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +89,7 @@
 				58A4DFB81BB6B31D001D7355 /* Assets.xcassets */,
 				58A4DFBA1BB6B31D001D7355 /* LaunchScreen.storyboard */,
 				58A4DFBD1BB6B31D001D7355 /* Info.plist */,
-				58A4DFC41BB6B545001D7355 /* ShoppingList-Bridging-Header.h */,
+				58A4DFD51BB73A1F001D7355 /* Shop.h */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 		6C13FCA890534DE4E0303746 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1FFDCA4AF877C886AC79E892 /* libPods-ShoppingList.a */,
+				F368F60B231D8CD31A1F1A7C /* Pods_ShoppingList.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -141,6 +141,7 @@
 				58A4DFAB1BB6B31D001D7355 /* Frameworks */,
 				58A4DFAC1BB6B31D001D7355 /* Resources */,
 				401552A9D3163DA1B069CA2B /* Copy Pods Resources */,
+				9DD7B7CDB88E0E62AD76E0AC /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,6 +227,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoppingList/Pods-ShoppingList-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DD7B7CDB88E0E62AD76E0AC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShoppingList/Pods-ShoppingList-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -359,7 +375,7 @@
 				OTHER_SWIFT_FLAGS = "-DPARSE";
 				PRODUCT_BUNDLE_IDENTIFIER = SF.ShoppingList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ShoppingList/ShoppingList-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = ShoppingList/Shop.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -375,7 +391,7 @@
 				OTHER_SWIFT_FLAGS = "-DPARSE";
 				PRODUCT_BUNDLE_IDENTIFIER = SF.ShoppingList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ShoppingList/ShoppingList-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = ShoppingList/Shop.h;
 			};
 			name = Release;
 		};

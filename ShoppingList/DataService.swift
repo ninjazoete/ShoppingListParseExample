@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 #if PARSE
 let ExternalDataService = DataService<ParseService>()
@@ -18,12 +19,12 @@ class DataService<S : Service> {
     private let internalService = S()
     
     // MARK: Public API
-    func registerUser(user : User, callback : NoRActionCallback) -> Void {
-        internalService.registerUser(user, callback: callback)
+    func registerUser(user : User) -> Observable<User> {
+        return internalService.registerUser(user)
     }
     
-    func loginUser(user: User, callback: NoRActionCallback) {
-        internalService.loginUser(user, callback: callback)
+    func loginUser(user: User) -> Observable<User> {
+        return internalService.loginUser(user)
     }
     
     // MARK: Private API

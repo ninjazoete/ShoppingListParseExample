@@ -121,9 +121,6 @@
                                     <constraint firstAttribute="width" constant="100" id="ETx-wn-IJi"/>
                                 </constraints>
                                 <state key="normal" title="Register"/>
-                                <connections>
-                                    <action selector="registerDidClick:" destination="fp3-O1-Gq8" eventType="touchUpInside" id="Yz5-eT-pUt"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiR-YA-gKm">
                                 <rect key="frame" x="540" y="30" width="30" height="30"/>
@@ -164,6 +161,11 @@
                             <constraint firstItem="FG5-Pi-Z9Q" firstAttribute="centerX" secondItem="3BN-q2-tPF" secondAttribute="centerX" id="xJg-qK-xEU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="FG5-Pi-Z9Q" id="Oyw-uV-V3w"/>
+                        <outlet property="registerButton" destination="MtJ-hZ-vhr" id="Gw9-3Z-pxp"/>
+                        <outlet property="usernameTextField" destination="y0d-qw-yoQ" id="saF-xy-9PR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foa-vO-Vml" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,10 +184,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="fp3-O1-Gq8" kind="show" identifier="ShoppingListForUserSegue" id="ysu-iE-o37"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxU-kl-hE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="261"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ysu-iE-o37"/>
+    </inferredMetricsTieBreakers>
 </document>
