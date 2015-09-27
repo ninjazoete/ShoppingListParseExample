@@ -16,8 +16,8 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource, UITab
     var listOwner : User?
     var ownerShoppingList : [Grocery] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
         fetchOwnerList()
     }
@@ -30,7 +30,7 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource, UITab
         if let user = listOwner {
             ExternalDataService.fetchGroceries(user).subscribe(next: { (groceryList) -> Void in
                 
-                self.ownerShoppingList.appendContentsOf(groceryList)
+                self.ownerShoppingList = groceryList
                 self.listTableView.reloadData()
                 
                 }, error: { (error) -> Void in

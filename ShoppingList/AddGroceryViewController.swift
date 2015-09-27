@@ -22,8 +22,7 @@ class AddGroceryViewController : UIViewController {
         super.viewDidLoad()
         
         let currentUser = PFUser.currentUser() as? User
-        
-        
+
         addGroceryButton.rx_tap.subscribe { (event) -> Void in
             
             guard
