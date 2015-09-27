@@ -123,7 +123,7 @@ class ParseService : Service {
             
             if let groceryList = groceries {
                 
-                let userGroceryList : [Grocery?] = groceryList
+                let userGroceryList : [Grocery] = groceryList
                     .map({ (pfGrocery : PFObject) -> Grocery? in
                         
                         guard
@@ -135,8 +135,9 @@ class ParseService : Service {
                         
                         return Grocery(owner: userId, amount: productAmount, productName: productName)
                     })
+                    .flatMap({ $0 })
             
-                observer.on(Event.Next(userGroceryList.flatMap({ $0 })))
+                observer.on(Event.Next(userGroceryList))
                 observer.on(Event.Completed)
             } else if let err = error {
                 observer.on(Event.Error(err))
